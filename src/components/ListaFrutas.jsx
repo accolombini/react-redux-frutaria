@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 import AdicionaFruta from './AdicionaFruta';
 import Fruta from './Fruta';
 
+// Componente ListaFrutas
+
 const ListaFrutas = () => {
   const frutas = useSelector(state => state.frutaReducers.frutas);
 

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { actions } from '../actions/frutas.action';
 
+// Componente AdicionaFruta
+
 const AdicionaFruta = () => {
   const [nome, setNome] = useState('');
   const [quantidade, setQuantidade] = useState(0);

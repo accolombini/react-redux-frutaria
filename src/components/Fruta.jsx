@@ -2,6 +2,8 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { actions } from '../actions/frutas.action';
 
+// Criando um componente chamado Fruta
+
 const Fruta = ({ fruta }) => {
   const dispatch = useDispatch();
 

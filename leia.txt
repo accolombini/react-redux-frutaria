@@ -15,6 +15,12 @@ Há dois tipos de componentes, os componentes de função que são adequados par
 funcition BemVindo(props) {
     return <p>Olá, tudo bem!!!, {props.nome}</p>;
 }
+Usando Hooks
+function BemVindo(){
+    const [nome, setNome] = useState('');
+    return <h1>Olá, {nome}</h1>;
+}
+
 E os componentes de classe, onde devemos escrever todos os métodos de classe. Componentes de classe por sua vez são multi tarefas, além de terem as propriedades podem gerenciar o estado (props, state e fazer uso do ciclo de vida tamném).
 class BemVindo extends Component {
     constructor(props) {
@@ -31,3 +37,6 @@ class BemVindo extends Component {
 Mas o que é então o Redux => é um controlodor geral do estado de sua Aplicação, com o Redux o state inteiro da aplcação fica centralizado em um único lugar, o Redux pode ser usado em uma aplicação JavaScript normal, não precisa necessariamente trabalhar com o React.
 
 Entendendo o fluxo de trabalho do REDUX -> nosso componente React, quando precisa fazer uma alteração no estado, ele dispara uma Action (ação) esta ação vai disparar o Reducer, que é encarregado de lidar com todas as ações, é como se fosse um filtro, sendo ele o Reducer que fará a alteração na Store (que seria como um conjunto de estado da aplicação). Após a alteração do estado na Store o componente é notificado da alteração.
+
+Mas antes de iniciar, precisamos instalar o Redux (é necessário para conectar o React com o Redux), para isso use:
+npm i redux react-redux
