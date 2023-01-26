@@ -8,7 +8,7 @@ const AdicionaFruta = () => {
   const [nome, setNome] = useState('');
   const [quantidade, setQuantidade] = useState(0);
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch();  // Este é um Hooks do React Redux que facilita muito nossa vida
 
   const adicionarFruta = event => {
     event.preventDefault();

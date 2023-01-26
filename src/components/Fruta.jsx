@@ -5,7 +5,7 @@ import { actions } from '../actions/frutas.action';
 // Criando um componente chamado Fruta
 
 const Fruta = ({ fruta }) => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch();  // Hook do React Redux que facilita nossa vida
 
   return (
     <div className="fruta">
