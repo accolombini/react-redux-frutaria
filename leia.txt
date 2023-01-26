@@ -40,3 +40,5 @@ Entendendo o fluxo de trabalho do REDUX -> nosso componente React, quando precis
 
 Mas antes de iniciar, precisamos instalar o Redux (é necessário para conectar o React com o Redux), para isso use:
 npm i redux react-redux
+
+Uma Ação é uma função JavaScript normalmente se faz um arquivo de ação para cada grupo de componente. No exemplo estamos trabalhando apenas com frutas, então cria-se uma action frutas, se num segundo momento desejar adicionar por exmplo, vegetais, deverá criar uma Action para vegetais.
