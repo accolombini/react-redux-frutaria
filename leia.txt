@@ -1,0 +1,33 @@
+Trabalhando com Redux
+
+O que é Redux?
+Como o Redux funciona?
+O que são => Actions, Reducers, Store
+Como integrar uma Aplicação React com Redux
+Como disparar ações para alteerar o estado da Aplicação
+Visualizar alterações no estado da Aplicação
+
+A grande vantagem de usar o Redux é que ele tem um maior controle sobre estado da Aplicação
+
+Um componente que têm um estado state passa os dados para outros componentes através de props que passam par outros componentes dentro da hieraquia através de props sucessivamente.
+
+Há dois tipos de componentes, os componentes de função que são adequados para tarefas específicas e são ótimos para apresentação de dados (trabalham com props):
+funcition BemVindo(props) {
+    return <p>Olá, tudo bem!!!, {props.nome}</p>;
+}
+E os componentes de classe, onde devemos escrever todos os métodos de classe. Componentes de classe por sua vez são multi tarefas, além de terem as propriedades podem gerenciar o estado (props, state e fazer uso do ciclo de vida tamném).
+class BemVindo extends Component {
+    constructor(props) {
+        super(props);
+        this,state = {  };
+    }
+    render() {
+        return <h1>Olá, {this.props.nome}</h1>;
+    }
+}
+
+É importante lembrar que podemos transformar componentes de classe em componentes de função através dos Hooks, por exemplo, useState(). Hooks são uma boa opção para controle de estados ou gerenciar o ciclo de vidda dentro de um componente de função usando Hooks.
+
+Mas o que é então o Redux => é um controlodor geral do estado de sua Aplicação, com o Redux o state inteiro da aplcação fica centralizado em um único lugar, o Redux pode ser usado em uma aplicação JavaScript normal, não precisa necessariamente trabalhar com o React.
+
+Entendendo o fluxo de trabalho do REDUX -> nosso componente React, quando precisa fazer uma alteração no estado, ele dispara uma Action (ação) esta ação vai disparar o Reducer, que é encarregado de lidar com todas as ações, é como se fosse um filtro, sendo ele o Reducer que fará a alteração na Store (que seria como um conjunto de estado da aplicação). Após a alteração do estado na Store o componente é notificado da alteração.
