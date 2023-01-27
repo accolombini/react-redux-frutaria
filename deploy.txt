@@ -16,3 +16,36 @@ Outra opção para o Deploy é o AWS da Amazon, Azure da Microsoft, o Firebase d
     4- Fazer o upload do build para o servidor
 
 Para gerar o código otimizado da aplicação para publicar, abra seu terminal e use o comando => npm run build
+
+---------Trabalhando com node recomenda-se------------
+
+Instalar utilisando o seguinte comando => sudo npm install -g serve. Esse é o pacote que fará a execução do projeto em seu ambiente NodeJs.
+
+    sudo npm install -g serve 
+
+Para executar o servidor basta digitar no seu terminal => serve -s build
+
+    serve -s build
+
+------------Fazendo Deploy utilizando o Heroku.com-------------
+
+    1- Acessar o site www.Heroku.com
+    2- Crie sua conta na plataforma
+    3- Acesse a plataforma HEROKU
+    4- Escolha <Create New App>
+    5- Dê um nome a sua aplicação -> para este exemplo escolhi <frutaria-dp>
+    6- Escolha a opção de país <US>
+    7- Escolha a opção - botão <create app>
+    8- Atualmente o HEROKU não disponibiliza opção free, sendo assim, a partir daqui apenas poderemos mostrar os passos, não sendo possível realizar a integração com a plataforma
+    9- Você têm várias opções para fazer o deploy da aplicação - vamos seguir com o Heroku
+    10- Para isso, será necessário instalar o aplicativo dd linha de comando do Heroku em sua máquina, para isso, no Mac use o seguinte comando => brew tap heroku/brew && brew install heroku
+    11- Para verificar se o utilitário do Heroku foi instalado, no terminal digite: heroku --version
+    12- O próximo passo é logar no terminal usando o comando: heroku login
+    13- Como todo projeto foi desenvolvido usando GitHub agora é só linkar o projeto local com o projeto que está no Heroku
+    14- No meu caso como criei no Heroku um app com o nome frutaria-dp o comando seria o seguinte => heroku git:remote -a frutaria-dp
+    15- Agora é preciso instalar o Server local em nossa aplicação (este server estará no arquivo package.json e package-lock.json), para isso, devemos usar o seguinte comando no terminal => npm install serve
+    16- Agora será preciso alterar o arquivo package.json para que a execução não seja estática, para isso, ara o arquivo e na região de Debug, apague a linha start: "react-scripts start" => substitua por: start: "serve -s build"
+    17- Como não podemos ter dois start, substitua o primeiro star na área de Debug por: dev: "react-scripts start"
+    18- Agora é só publicar a aplicação no HEROKU, para isto basta digitar o comando: git push heroku master
+    19- Lembre de fazer seu commit antes de executar o push no Heroku
+    20- Para proteger um pouco a aplicação, na região de DEBUG do seu arquivo package.json, substitua a linha build por =>  build: "GENERATE_SOURCEMAP=false react-scripts build"
