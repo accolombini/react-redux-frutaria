@@ -11,7 +11,8 @@ Outra opção para o Deploy é o AWS da Amazon, Azure da Microsoft, o Firebase d
 ------Etapas de Aplicação ------------
 
     1- Verificar se o domínio está mapeado corretamente no servidor.
-    2- Configurar seu servidor HTTP para que a página index.html (que fica dentro da pasta public -> é esse arquivo que precisa ser configurado) possa ser acessada
+    2- Configurar seu servidor HTTP para que a página index.html (que fica dentro da pasta public -> é esse arquivo que precisa ser configurado) possa ser acessada. Neste arquivo index.html há uma div com id=root e o arquivo index.js que se encontra na pasta src faz a renderização da página apontando para essa div root que se encontra em index.html. 
     3- Gerar um build com o código otimizado
     4- Fazer o upload do build para o servidor
-    
+
+Para gerar o código otimizado da aplicação para publicar, abra seu terminal e use o comando => npm run build
