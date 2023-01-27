@@ -1,0 +1,17 @@
+Algumas dicas de como fazer o Deploy de uma aplicação React
+
+Quais são as etapas de implantação
+
+Como gerar um build com o código otimizado para implantação
+
+Como exemplo de Deploy vamos fazer um Deploy usando a plataforma HEROKU (interessante por apresentar integração com o NodeJs e várias outras linguagens também)
+
+Outra opção para o Deploy é o AWS da Amazon, Azure da Microsoft, o Firebase do Google e outras como DigitalOcean e Netlify
+
+------Etapas de Aplicação ------------
+
+    1- Verificar se o domínio está mapeado corretamente no servidor.
+    2- Configurar seu servidor HTTP para que a página index.html (que fica dentro da pasta public -> é esse arquivo que precisa ser configurado) possa ser acessada
+    3- Gerar um build com o código otimizado
+    4- Fazer o upload do build para o servidor
+    
